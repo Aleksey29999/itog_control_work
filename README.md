@@ -217,6 +217,7 @@ DELETE FROM camels;
 
 SELECT Name, Birthday, Commands FROM horses
 UNION SELECT  Name, Birthday, Commands FROM donkeys;
+![image](https://github.com/Aleksey29999/itog_control_work/assets/119962645/af49ab3b-10af-4e59-8a0b-f095f2d4df07)
 
 
 11.Создать новую таблицу “молодые животные” в которую попадут все
@@ -236,6 +237,7 @@ SELECT Name, Birthday, Commands, genus, TIMESTAMPDIFF(MONTH, Birthday, CURDATE()
 FROM animals WHERE Birthday BETWEEN ADDDATE(curdate(), INTERVAL -3 YEAR) AND ADDDATE(CURDATE(), INTERVAL -1 YEAR);
  
 SELECT * FROM yang_animal;
+![image](https://github.com/Aleksey29999/itog_control_work/assets/119962645/d525ffc7-101f-464b-89ea-cd8325e7928d)
 
 
 12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на
@@ -265,6 +267,7 @@ SELECT hm.Name, hm.Birthday, hm.Commands, ha.Genus_name, ya.Age_in_month
 FROM hamsters hm
 LEFT JOIN yang_animal ya ON ya.Name = hm.Name
 LEFT JOIN home_animals ha ON ha.Id = hm.Genus_id;
+![image](https://github.com/Aleksey29999/itog_control_work/assets/119962645/c5eda2c8-e27a-4b86-bc56-37b3f06ada13)
 
 
 
@@ -282,3 +285,6 @@ LEFT JOIN home_animals ha ON ha.Id = hm.Genus_id;
 блоке try-with-resources. Нужно бросить исключение, если работа с объектом
 типа счетчик была не в ресурсном try и/или ресурс остался открыт. Значение
 считать в ресурсе try, если при заведения животного заполнены все поля.
+
+https://github.com/Aleksey29999/itog_control_work/tree/master
+
